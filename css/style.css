@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+/* WRAPPER */
+.wrapper {
+  width: 1024px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+@media (max-width: 1100px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+/* NAVBAR */
+nav {
+  background-color: #393E46;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #00ADB5;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+header {
+  height: 100vh;
+  background: url("../image/back.jpeg") center/cover no-repeat;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-opacity {
+  position: absolute;
+  inset: 0;
+  background-color: #222831;
+  opacity: 0.8;
+}
+
+.header-jumbutron {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.header-jumbutron h4 {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.header-jumbutron h5 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+/* STATISTIC */
+#statictic {
+  background-color: #222831;
+  color: #fff;
+}
+
+#statictic .wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#statictic .wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#statictic i {
+  font-size: 2.5rem;
+  color: #00ADB5;
+  margin-bottom: 10px;
+}
+
+#statictic p {
+  margin: 0;
+  font-weight: 600;
+}
+
+#statictic small {
+  color: #ccc;
+  margin-top: 5px;
+}
+
+/* SECTION GENERAL */
+#datadiri,
+#sekolah {
+  background-color: #222831;
+  color: #fff;
+  padding: 60px 0;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+h4 span {
+  color: #00ADB5;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.grid .item {
+  background-color: #1b222b;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.grid .item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,173,181,0.4);
+}
+
+.grid img {
+  width: 80%;
+  border-radius: 15px;
+}
+
+/* CODEPOLITAN */
+.codepolitan {
+  border: 2px solid #FFD700;
+}
+
+.codepolitan a {
+  color: #FFD700;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* TENTANG SAYA */
+#tentang-saya {
+  background-color: #222831;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* CONTACT */
+#contact {
+  background-color: #222831;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.contact-desc {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: #ccc;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.contact-item {
+  background-color: #1b222b;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.contact-item i {
+  font-size: 2.5rem;
+  color: #00ADB5;
+  margin-bottom: 15px;
+}
+
+.contact-item span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-item small {
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.contact-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,173,181,0.4);
+}
